@@ -2,11 +2,11 @@ pipeline{
     agent any 
     stages{
         stage("build"){
-            agent{
-                docker{
+            agent {
+                docker {
                     image "openjdk-8"
                 }
-            }
+              }
             steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonarqb') {
