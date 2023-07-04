@@ -10,18 +10,18 @@ pipeline{
             steps{
                 withSonarQubeEnv(credentialsId: 'sonarqb') {
                 // some block
-                script{
-                    sh " chmod +x gradlew"
-                    sh " ./gradew sonarqube"
-                }
-                timeout(5) {
-                  // some block
-                def sq = waitforqualitygate()
-                if (sq.status != 'ok'){
-                    error "pipeline aborted due to quality gate failure: ${sq.status} ." 
+                    script{
+                        sh " chmod +x gradlew"
+                        sh " ./gradew sonarqube"
+                    }
+                    timeout(5) {
+                    // some block
+                    def sq = waitforqualitygate()
+                    if (sq.status != 'ok'){
+                        error "pipeline aborted due to quality gate failure: ${sq.status} ." 
 
-                    
-                }
+                        
+                    }
                 
                 }
             }
