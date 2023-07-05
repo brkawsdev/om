@@ -13,7 +13,7 @@ pipeline{
                     // some block
                         
                             sh " chmod +x gradlew"
-                            sh " ./gradew sonarqube"
+                            sh " ./gradlew sonarqube"
                         }
                         timeout(5) {
                         // some block
