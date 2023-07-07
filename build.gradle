@@ -28,8 +28,8 @@ test {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'http://3.83.54.211:9000'
-        property 'sonar.login', 'admin'
-		property 'sonar.password','sonar123'
+        property 'sonar.host.url', '54.210.39.139:9000'
+        property 'sonar.login', 'sqa_240b8b4240a3cd6876cd1799c44ee551963192c3'
+		
     }
 }
